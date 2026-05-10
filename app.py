@@ -12,6 +12,13 @@ import matplotlib.pyplot as plt
 
 from cr3bp import make_features, integrate_orbit
 
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+model_path = os.path.join(BASE_DIR, "models", "random_forest.pkl")
+data_path = os.path.join(BASE_DIR, "data", "orbits.csv")
+
 
 st.set_page_config(
     page_title="CR3BP Orbital Stability Classifier",
