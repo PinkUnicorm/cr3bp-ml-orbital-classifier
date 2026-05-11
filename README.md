@@ -1,4 +1,7 @@
 # CR3BP Orbital Stability Classification using Machine Learning
+# Interactive demo of the application here
+https://cr3bp-ml-orbital-classifier.streamlit.app/ 
+
 # Overview
 This project applies machine learning to classify orbital behavior in the **Circular Restricted Three-Body Problem (CR3BP)**. Given initial conditions, the model predicts whether a small object will:
 
@@ -7,21 +10,6 @@ This project applies machine learning to classify orbital behavior in the **Circ
 - Collide with one of the primary bodies
 
 The dataset is generated using numerical simulation of the governing differential equations.
-
-
-# Project Structure
-cr3bp_ml_project/
-├── data/ # Generated dataset
-│ └── orbits.csv
-├── models/ # Trained ML models
-├── results/ # Evaluation outputs (optional)
-├── src/
-│ ├── cr3bp.py # Physics simulation (CR3BP equations)
-│ ├── generate_dataset.py # Dataset generation script
-│ ├── train_models.py # Model training and evaluation
-│ └── app.py # Streamlit interactive demo
-├── requirements.txt
-└── README.md
 
 # Problem Description
 The Circular Restricted Three-Body Problem models the motion of a small object under the gravitational influence of two larger bodies.
@@ -67,8 +55,21 @@ Evaluation metrics include:
 - F1-score
 - Confusion matrix
 
-# Running the Project
+# Project Structure
+cr3bp_ml_project/
+├── data/ # Generated dataset
+│ └── orbits.csv
+├── models/ # Trained ML models
+├── results/ # Evaluation outputs (optional)
+├── src/
+│ ├── cr3bp.py # Physics simulation (CR3BP equations)
+│ ├── generate_dataset.py # Dataset generation script
+│ ├── train_models.py # Model training and evaluation
+│ └── app.py # Streamlit interactive demo
+├── requirements.txt
+└── README.md
 
+# Running the Project
 # 1. Install dependencies
 pip install -r requirements.txt
 
@@ -82,3 +83,4 @@ python3 src/train_models.py
 streamlit run src/app.py
 
 # Interactive app features 
+An interactive web app that lets users define a three-body system, adjust initial conditions, and instantly see machine learning predictions with real-time trajectory visualization.
